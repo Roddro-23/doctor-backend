@@ -22,4 +22,9 @@ public class TestimonialController {
     public Testimonial saveTestimonial(@RequestBody Testimonial testimonial) {
         return service.saveTestimonial(testimonial);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteTestimonial(@PathVariable Long id) {
+        service.deleteTestimonial(id);
+    }
 }

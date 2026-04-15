@@ -25,4 +25,6 @@ public class Doctor {
     private String email;
     private String phone;
     private String imageUrl;
+    private String bio;
+    private String summary;
 }

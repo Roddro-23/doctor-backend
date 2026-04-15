@@ -21,4 +21,9 @@ public class MedicalServiceController {
     public MedicalService saveService(@RequestBody MedicalService medicalService) {
         return service.saveService(medicalService);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteService(@PathVariable Long id) {
+        service.deleteService(id);
+    }
 }

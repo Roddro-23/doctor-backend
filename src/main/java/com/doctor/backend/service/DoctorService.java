@@ -20,6 +20,10 @@ public class DoctorService {
     }
 
     public Doctor saveDoctor(Doctor doctor) {
+        Doctor existing = getFirstDoctor();
+        if (existing != null) {
+            doctor.setId(existing.getId()); // Force update of the first record
+        }
         return doctorRepository.save(doctor);
     }
 

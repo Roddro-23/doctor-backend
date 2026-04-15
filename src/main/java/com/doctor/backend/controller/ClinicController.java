@@ -21,4 +21,9 @@ public class ClinicController {
     public Clinic saveClinic(@RequestBody Clinic clinic) {
         return service.saveClinic(clinic);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteClinic(@PathVariable Long id) {
+        service.deleteClinic(id);
+    }
 }
